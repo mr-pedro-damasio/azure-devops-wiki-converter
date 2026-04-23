@@ -31,6 +31,7 @@ Living implementation plan for this repository.
 
 - Keep this file updated whenever scope or priorities change.
 - Keep this first iteration focused on definition only (no full implementation).
+- 2026-04-23: Added a root `.gitignore` with project-agnostic defaults while the stack is still undefined.
 - 2026-04-18: Added `hostRequirements` baseline in `.devcontainer/devcontainer.json` for better Codespaces sizing defaults.
 - 2026-04-18: Added dual-mode docs for Dev Containers and Codespaces, including ownership boundaries and a Codespaces setup runbook.
 - 2026-04-19: Removed one Git-related editor extension from dev container installed extensions and workspace recommendations.
