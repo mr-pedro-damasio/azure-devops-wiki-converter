@@ -1,0 +1,35 @@
+Default_MinLoggingLevelId:
+error
+Logging_Active:
+True
+Serilog_ConfigJSON:
+{
+ "Serilog": {
+ "MinimumLevel": {
+ "Default": "Verbose"
+ },
+"Using": [
+"Serilog.Sinks.File",
+"Serilog.Sinks.Async"
+],
+ "WriteTo": [{
+ "Name": "Async",
+ "Args": {
+ "bufferSize": 10000,
+ "configure": [{
+ "Name": "File",
+ "Args": {
+ "path": "d:/Logs/ESPACE_log_file.log",
+ "shared": true,
+ "rollingInterval": "Day",
+ "fileSizeLimitBytes": 10000000,
+ "rollOnFileSizeLimit": true,
+ "formatter": "Serilog.Formatting.Json.JsonFormatter"
+ }
+ }
+ ]
+ }
+ }
+ ]
+ }
+}

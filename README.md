@@ -1,115 +1,204 @@
 # azure-devops-wiki-converter
 
-Convert an Azure DevOps Wiki into Microsoft Word documents while preserving folder structure, hyperlinks, and embedded images.
+Convert an Azure DevOps wiki into a set of Microsoft Word documents while preserving folder structure, cross-page hyperlinks, and embedded images.
 
-This repository is currently in the project-definition stage. The development environment is ready, and the next milestone is to define the MVP, stack, and implementation approach for the converter.
+## Quick start
 
-## Project goal
+```bash
+npm install -g azure-devops-wiki-converter
 
-The goal of this project is to export Azure DevOps Wiki content into a set of Word documents that remain usable outside Azure DevOps. The output should preserve the original wiki hierarchy, keep links working where possible, and render images correctly in the generated documents.
+converter convert \
+  --url    "https://dev.azure.com/{org}/{project}/_git/{project}.wiki" \
+  --token  "YOUR_PAT" \
+  --output ./wiki-export
+```
 
-## Current status
+Or with Docker (no local Node or Pandoc required):
 
-- Project initialization is in progress.
-- Repository documentation has been converted from the starter template to the project context.
-- Product-definition work is tracked in `docs/PLAN.md`.
-- No converter implementation has been added yet.
+```bash
+docker run --rm \
+  -v "$(pwd)/wiki-export:/output" \
+  ghcr.io/mr-pedro-damasio/azure-devops-wiki-converter:latest \
+  convert \
+  --url    "https://dev.azure.com/{org}/{project}/_git/{project}.wiki" \
+  --token  "YOUR_PAT" \
+  --output /output
+```
 
-## Development environment
+## Commands
 
-The repository includes a reproducible development environment for both local Dev Containers and GitHub Codespaces.
+### `converter convert`
 
-### Quick start
+Clone a wiki and convert all pages to DOCX files.
 
-#### Option A: Local Dev Container
+```
+converter convert [options]
 
-1. Open this folder in VS Code.
-2. Run the command `Dev Containers: Reopen in Container`.
-3. Wait for the build and post-create setup to complete.
+Required:
+  --url <git-url>     Azure DevOps wiki Git URL
+  --output <dir>      Output directory
 
-When setup finishes, the script prints `Dev container is ready.`
+Optional:
+  --token <pat>       Personal Access Token (default: AZURE_DEVOPS_PAT env var)
+  --template <docx>   Custom reference.docx style template
+  --clean             Remove the existing output directory before writing
+  --verbose           Enable verbose logging
+```
 
-#### Option B: GitHub Codespaces
+### `converter download`
 
-1. Create a new codespace from this repository.
-2. Wait for container creation and post-create setup.
-3. Open the project in the web editor or desktop VS Code.
+Validate access and list pages without generating output.
 
-The same `.devcontainer/devcontainer.json` is used in both modes.
+```
+converter download [options]
 
-## Environment details
+Required:
+  --url <git-url>     Azure DevOps wiki Git URL
 
-The container is built from `mcr.microsoft.com/devcontainers/base:ubuntu`.
+Optional:
+  --token <pat>       Personal Access Token (default: AZURE_DEVOPS_PAT env var)
+  --dry-run           Validate URL format only; skip cloning
+```
 
-Installed OS packages:
+## PAT requirements
 
-- `build-essential`
-- `curl`
-- `ca-certificates`
+The Personal Access Token must have **Code → Read** scope. Supply it via:
 
-Enabled Dev Container features:
+- `--token YOUR_PAT` flag (highest precedence)
+- `AZURE_DEVOPS_PAT` environment variable
 
-- `common-utils`
-- `node`
+Azure DevOps may show clone URLs in the form `https://{user}@dev.azure.com/{org}/{project}/_git/{repo}`. The converter accepts either that form or the same URL without the optional `{user}@` prefix.
 
-Baseline host requirements declared in the dev container:
+The token is never written to disk or included in log output.
 
-- `cpus`: `2`
-- `memory`: `4gb`
-- `storage`: `16gb`
+## Output structure
 
-## VS Code customization
+```
+wiki-export/
+  index.docx                     # root index linking to all pages
+  Introduction.docx
+  Getting-Started/
+    Overview.docx
+  .attachments/
+    logo.png                     # images (also embedded in DOCX)
+    report.xlsx                  # non-markdown files copied as-is
+  conversion-report.json         # machine-readable summary
+```
 
-The container installs these VS Code extensions:
+## Supported markdown features
 
-- `ms-azuretools.vscode-docker`
-- `esbenp.prettier-vscode`
-- `google.geminicodeassist`
-- `anthropic.claude-code`
+| Feature | Behaviour |
+|---------|-----------|
+| Headings, paragraphs, lists | Full support via Pandoc |
+| Tables | Full GFM table support |
+| Fenced code blocks | Preserved with syntax highlighting |
+| Embedded images (`.attachments/`) | Embedded in DOCX via Pandoc resource paths |
+| `[[WikiLink]]` cross-page links | Rewritten to relative `.docx` hyperlinks |
+| `[[Target\|Display Text]]` links | Custom display text preserved |
+| Non-markdown attachments (PDF, xlsx) | Copied to output alongside DOCX files |
 
-## Post-create automation
+## Known limitations
 
-After the container is created, VS Code runs `bash .devcontainer/postCreateCommand.sh`.
+| Feature | Behaviour |
+|---------|-----------|
+| Mermaid diagrams | Replaced with placeholder; warning in report |
+| Azure DevOps `:::` extension blocks | Replaced with placeholder; warning in report |
+| `<iframe>` embeds | Replaced with placeholder; warning in report |
+| External image URLs | Not downloaded; remain as hyperlinks |
+| Multiple wikis per invocation | Not supported (one `--url` per run) |
+| Single combined DOCX | Not supported (one file per page) |
 
-That script currently:
+## Custom Word template
 
-1. Marks the workspace as a safe Git directory.
-2. Installs the Claude Code CLI.
-3. Configures the official Claude plugin marketplace.
-4. Installs the `ralph-loop` plugin.
+Override the default styling by providing your own `reference.docx`:
+
+```bash
+converter convert --url <...> --output ./out --template ./corporate-style.docx
+```
+
+Create a `reference.docx` by opening any Word document, applying the styles you want (Heading 1, Body Text, Code, etc.), and saving it. Pandoc uses the styles from this file when generating output.
+
+## Cleaning output
+
+By default, `converter convert` writes into the existing output directory and overwrites files with the same path, but it does not delete older files left over from previous runs.
+
+Use `--clean` to remove the output directory before generating fresh output:
+
+```bash
+converter convert --url <...> --output ./out --clean
+```
+
+## Exit codes
+
+| Code | Meaning |
+|------|---------|
+| 0 | All pages converted successfully |
+| 1 | Partial success — some pages or images were skipped |
+| 2 | Critical failure — no output produced |
+
+## Development
+
+### Prerequisites
+
+- Node.js ≥ 18
+- Pandoc ≥ 3.0 (installed automatically in the Dev Container)
+
+### Setup
+
+```bash
+git clone https://github.com/mr-pedro-damasio/azure-devops-wiki-converter
+cd azure-devops-wiki-converter
+npm install
+npm run build
+```
+
+### Commands
+
+```bash
+npm run build    # compile TypeScript → dist/
+npm test         # run unit + integration tests
+npm run lint     # ESLint
+npm run format   # Prettier
+```
+
+### Dev Container
+
+Open in VS Code and choose **Dev Containers: Reopen in Container**. The container installs Node.js and Pandoc automatically.
 
 ## Repository layout
 
-```text
+```
 .
-|-- .devcontainer/
-|-- docs/
-|   |-- PLAN.md
-|   |-- architecture/
-|   `-- runbooks/
-|-- scripts/
-|-- AGENTS.md
-|-- CLAUDE.md
-`-- README.md
+├── assets/
+│   └── reference.docx          # default Word style template
+├── docs/
+│   ├── PLAN.md                 # implementation checklist
+│   ├── ARCHITECTURE.md         # pipeline stages and data flow
+│   ├── USER_GUIDE.md           # step-by-step usage instructions
+│   └── architecture/
+│       └── converter-pipeline.md
+├── src/
+│   ├── cli.ts                  # CLI entry point
+│   ├── index.ts                # public API re-exports
+│   ├── downloader/             # URL validation + git clone
+│   ├── manifest/               # wiki tree walker
+│   ├── normalizer/             # markdown transforms
+│   ├── generator/              # Pandoc invocation
+│   ├── assembler/              # output assembly + report
+│   └── utils/                 # pandoc check, logger, retry
+├── tests/
+│   ├── fixtures/
+│   │   └── sample-wiki/        # representative test fixture
+│   ├── e2e.test.ts
+│   ├── performance.test.ts
+│   └── *.test.ts
+├── Dockerfile
+├── AGENTS.md
+└── CLAUDE.md
 ```
 
-## Planning and docs
+## Further reading
 
-- `docs/PLAN.md`: Active milestone tracking for project setup and definition.
-- `docs/architecture/`: Reserved for architecture and project-definition notes.
-- `docs/runbooks/codespaces-setup.md`: GitHub-side Codespaces setup checklist.
-
-## Codespaces settings outside the repository
-
-Some Codespaces settings are not stored in this repository and still need to be configured in GitHub, including:
-
-- Default machine size
-- Retention and idle timeout
-- Prebuild policy
-- Repository or organization secrets
-
-For the full checklist, see `docs/runbooks/codespaces-setup.md`.
-
-## Next milestone
-
-Milestone 3 will define the converter's target users, non-goals, MVP scope, and primary technology stack before implementation begins.
+- [User Guide](docs/USER_GUIDE.md) — detailed step-by-step walkthrough
+- [Architecture](docs/ARCHITECTURE.md) — pipeline stages, data flow, edge-case handling
+- [Plan](docs/PLAN.md) — implementation milestones and status

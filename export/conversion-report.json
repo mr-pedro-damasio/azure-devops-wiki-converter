@@ -1,0 +1,583 @@
+{
+  "generatedAt": "2026-04-23T22:00:38.137Z",
+  "wikiUrl": "https://DSTILuzSaude@dev.azure.com/DSTILuzSaude/LS.DSTI.SWF.ARCH/_git/LS.DSTI.SWF.Wiki.wiki",
+  "pagesConverted": 121,
+  "pagesSkipped": 0,
+  "imagesEmbedded": 0,
+  "linksRewritten": 0,
+  "nonMarkdownFilesCopied": 5,
+  "warnings": [
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-link",
+      "message": "Unresolved wiki link: [[_TOC_]]"
+    },
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-06562d2b-9c06-479f-a9cb-5de52d04f718.png"
+    },
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-a270e59b-dba0-491d-aade-420e26d8210b.png"
+    },
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-87a9c47b-82aa-49bb-b688-2987116ec393.png"
+    },
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-63f6f922-3f4b-49f6-b397-0070b9473fb9.png"
+    },
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-450953bd-7c7c-4c18-b31f-83bbcffca52f.png"
+    },
+    {
+      "page": "2.1 Arquivo Digital (ADG)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-536b2d4c-fac9-4e7b-8e16-c9e7f3d522e9.png"
+    },
+    {
+      "page": "2.2 XF %2D DBCONNECT",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-b41a30f5-6cec-49c4-9c01-c096f999fed4.png"
+    },
+    {
+      "page": "2.3 XF%2DDL Dynamic Linq",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-efbd95cf-bf57-4d63-97aa-68a7c7ebdf60.png"
+    },
+    {
+      "page": "2.4 XF%2DDS Dynamic Services",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-55b28a0e-e84e-4a67-8f1a-88afb5b0865d.png"
+    },
+    {
+      "page": "2.5 XF%2DDT Logs (Dynatrace)",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-2dfa88fb-5ef6-4f9f-9916-cc2604ead423.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-link",
+      "message": "Unresolved wiki link: [[_TOC_]]"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-790fe6b3-f49d-4d82-80a0-80932431b9ca.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0da89312-3419-4f14-8c82-8118b3151d6c.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-e372d01f-e53c-48a6-9d3c-98fbbc4020f8.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-c1b765f6-8dae-4de5-9e5b-296b49072bc6.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-a94a07a6-08c6-4736-9314-0a5d53bdb50e.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-d8badeeb-50b5-437e-a9ff-51e6e86edafc.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0eee47b9-bbc0-45c1-bd2e-f3a14c212cc7.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-8f304230-f085-45ce-bc55-bda454aa0f24.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-77525a1a-eb57-4407-b2d0-0c4d327e34e2.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-80568d61-6bb8-48f5-bba4-c506ba740ee9.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0faa60b8-8418-40b6-a38a-abdae7152b76.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-f7fb0d69-8e88-4a08-9e5d-6929f9ce85e7.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-753a4fc5-62ec-41cb-9497-3bb0987d8e3e.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-58fa5122-7b93-4eb5-93f9-eb95c2cefd52.png"
+    },
+    {
+      "page": "2.6 XF%2DPUBSUB Server",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-b25de146-695f-4e5d-b0e0-f5ed50313fd0.png"
+    },
+    {
+      "page": "2.7 FRG TMPL Refactor",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-ecf2e1ee-62da-4c85-a5fe-ccd54b450862.png"
+    },
+    {
+      "page": "2.7 FRG TMPL Refactor",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0d963215-2def-4b62-b173-eff374b8a443.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-link",
+      "message": "Unresolved wiki link: [[_TOC_]]"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-25043de0-81d5-489f-8866-ad842a22a04f.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-4e9133d3-5935-47c1-8001-e7d1dddebd72.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-5f8a9cc2-df62-47fb-b1fd-cf06d8eaf98b.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-c2e730a7-a744-4ef7-bcf6-52af40b821b9.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-fe7d8f06-51ba-469a-b106-52d4706e5872.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-1bea4a10-854e-4cc7-8e93-2fce33f7b2f9.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-72551627-e05c-4820-8c27-43b61937d76b.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-c447bc72-59c5-40cd-9c96-b8eb516d8b2d.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-190f3beb-dae3-4b26-8efe-437c5fe9314f.png"
+    },
+    {
+      "page": "2.8 XF%2DRESILIENT Web Request Policies",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-96b9b4c5-227b-4f33-972c-d33727a13bfb.png"
+    },
+    {
+      "page": "2.9 XF%2DURI",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-df191c3f-2baf-4708-a014-f13cd815caac.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-link",
+      "message": "Unresolved wiki link: [[_TOC_]]"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-286d326d-9ab0-43c2-bfa4-e777e951d694.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0fbb8683-d29b-4b85-8cce-89e0a2e3f1f9.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-381a88ac-aa82-42ea-bbc5-51457cc55f6a.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-456a855b-26d3-4940-a2a1-c8bb7136068e.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-82bd5629-c511-4f2e-bd11-d1ea681927b7.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-34620260-fc58-4e0f-9ead-46e1ec05fc7c.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0e8a71e2-be36-4c61-858c-945403e1a050.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9520f9f1-17af-43fe-bf67-28b43b2aa0ca.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-849fbee5-7149-4f51-b1ec-923e40822073.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-f7affb08-5594-4341-ba5d-ba53211597fe.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-fbec873b-657c-4e71-9fc8-f44e6b8ac319.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-71ced5ad-f2a8-4ad9-b757-10b7c0a66ec3.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-647c2b8a-ddd6-456a-b45e-4d733147ac2c.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-34620260-fc58-4e0f-9ead-46e1ec05fc7c.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-0e8a71e2-be36-4c61-858c-945403e1a050.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9520f9f1-17af-43fe-bf67-28b43b2aa0ca.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-21c71389-01cd-4d6f-ad7e-57f559b99019.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-230f4436-c6e9-4298-8767-0c50f0bdb70d.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-055ad48b-3f62-4db8-9171-4d61b5d0beea.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-488b6cd1-1775-4d4a-a8a7-209656302631.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-05a169da-b990-45bc-a2fa-def0fe97f464.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-ee80a99c-b9f2-4b92-a293-7e4b23bd3ee7.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-a8840f42-6e6d-4e22-847d-6be00d7e69a3.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-a980e651-ceff-4743-a6c9-3bdedad546eb.png"
+    },
+    {
+      "page": "3.1.1 Criação de Users em HRDIM para ambientes não produtivos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-e9498737-d85a-4a68-973f-65de8779554d.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-link",
+      "message": "Unresolved wiki link: [[_TOC_]]"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-c53d06ef-99f3-4ce0-80bd-aafa7e57a17f.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-e4b2f31c-f334-4827-83ea-5b8d01bd464e.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-e4208ef8-8064-4128-bb12-7a1915bb0177.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-4233c795-4da0-496e-8be2-ca5c25243f73.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-90c6dc14-8862-4166-a8a9-a3f22007eb42.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-5b210666-f10a-4b6b-868f-f19bae233ef9.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-bad13486-31dd-450e-9579-fce98451079f.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-89c00e81-547e-4e8b-92de-737af3e9e8d2.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-8c546480-68c2-4fcf-8ffc-1b2df94642b5.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-6412fb2e-9731-4bd9-a0d3-a377265cc5a2.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-1905779f-8465-47c1-a65d-b0357ecdc977.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-d32e3475-6d7b-4258-9695-e9cce938a641.png"
+    },
+    {
+      "page": "3.1.2 Criar equipa + atribuir perfis de equipa a um colaborador no HRDIM",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-6e4665ae-30d8-4564-8112-2d1c5f827661.png"
+    },
+    {
+      "page": "3.2.3.1 Módulos End User",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-7143e129-265e-40f6-a3cd-8f15312b77a6.png"
+    },
+    {
+      "page": "Cores",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-2f8ceb97-0e25-4f1e-bf24-e8c9ec579bcd.png"
+    },
+    {
+      "page": "Foundations",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9c8d7e89-a428-4ab8-af0a-a6e404c44897.png"
+    },
+    {
+      "page": "3.2 Arquitetura aplicacional",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-7f42f16a-ec04-4ffe-acde-88b70988b6c0.png"
+    },
+    {
+      "page": "Particionamento Por Intervalo",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9b609b91-8018-4af2-9fb1-8b1b7c88f163.png"
+    },
+    {
+      "page": "Particionamento Por Lista",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9b609b91-8018-4af2-9fb1-8b1b7c88f163.png"
+    },
+    {
+      "page": "Particionamento por Referência",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9b609b91-8018-4af2-9fb1-8b1b7c88f163.png"
+    },
+    {
+      "page": "3.3 Particionamento de tabelas",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-9b609b91-8018-4af2-9fb1-8b1b7c88f163.png"
+    },
+    {
+      "page": "3.3.1 Housekeeping por Particionamento",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-b85b134b-654b-4226-b3c2-edd6fad53647.png"
+    },
+    {
+      "page": "4.1.1 Logging",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-a82754d4-d244-4ed0-ad86-3560bb51562a.png"
+    },
+    {
+      "page": "4.1.1 Logging",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-8243bb9a-d65d-4aab-9e90-f23c57dac227.png"
+    },
+    {
+      "page": "4.1.1 Logging",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-2ed5dda2-0a48-4d96-9f2e-f51a5a637d53.png"
+    },
+    {
+      "page": "4.1.2  Session Replay",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/==image_0==-4c51957f-eecd-4782-a5f7-e60c8b4b8303.jpg"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-1ae957ab-a94e-4de1-abf5-e9828e036295.png"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/Captura%20de%20ecrã%202026-01-08%20165532-2771285a-3072-4190-9fda-3b738d747f96.png"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-140383e1-9306-42ee-9faa-25f2d7c16c2b.png"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/Capture-205c0284-c242-4c2a-ad4c-8d1cce412f3f.PNG"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/Captura%20de%20ecrã%202026-01-08%20165739-04a7b205-1f50-462d-98ad-6adb27f63792.png"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/Captura%20de%20ecrã%202026-01-08%20165210-5d1e7111-c94d-426d-8a3a-8b3d4108e52a.png"
+    },
+    {
+      "page": "4.4 Firebase",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/Captura%20de%20ecrã%202026-01-08%20165311-b4134fc6-cbae-4d2e-9827-a655b38d3ba2.png"
+    },
+    {
+      "page": "4.5 Aprovisionamento de Users",
+      "type": "unsupported-construct",
+      "message": "Unsupported ::: block removed"
+    },
+    {
+      "page": "4.5 Aprovisionamento de Users",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-1e0ad4fb-53c7-4c8f-8283-5eacf53b9a85.png"
+    },
+    {
+      "page": "4.9 Componentes da Forge",
+      "type": "unsupported-construct",
+      "message": "Unsupported ::: block removed"
+    },
+    {
+      "page": "[InProgress] BizEvents Trigger in Outsytems App",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/==image_0==-ed5d5d45-f4da-4e65-b2f2-f70a08e018ab.jpeg"
+    },
+    {
+      "page": "[InProgress] BizEvents Trigger in Outsytems App",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/==image_0==-186b4c9a-3e90-48cf-a38e-7a884f37548c.jpeg"
+    },
+    {
+      "page": "Acessos a Sistemas Internos e Externos",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/ModeloAcessoSistemasExternos_Wiki-89d132ab-fdf2-402f-9a61-bea9de88c5fa.png"
+    },
+    {
+      "page": "Service Actions",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-1f80218e-6a42-41ea-add1-8762f440a6b1.png"
+    },
+    {
+      "page": "Service Actions",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-60fa7f8c-5806-47a5-9dba-239d359a4f34.png"
+    },
+    {
+      "page": "Service Actions",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-737f7d9c-dd85-4627-bbc4-4f3aa3b12793.png"
+    },
+    {
+      "page": "Service Actions",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-7642e71f-2cb1-40c1-9b7d-ecf35dc4ce2e.png"
+    },
+    {
+      "page": "Service Actions",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-d8d7cee1-4466-40a3-8d16-38152c6708cc.png"
+    },
+    {
+      "page": "Service Actions",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-54ed0c96-df43-4f93-887b-8684632d7948.png"
+    },
+    {
+      "page": "5.2.4 Sequence Caching",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-c163a502-8448-4f32-9746-a36a994b6db2.png"
+    }
+  ],
+  "failures": [],
+  "exitCode": 0
+}

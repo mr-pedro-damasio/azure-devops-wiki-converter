@@ -1,0 +1,14 @@
+export { checkPandoc, pandocVersion } from './utils/pandoc';
+export { validateWikiUrl, maskPat, cloneWiki } from './downloader';
+export type { CloneResult } from './downloader';
+export { buildManifest } from './manifest';
+export type { WikiManifest, PageEntry, AttachmentEntry } from './manifest';
+export { sanitizeFilename, buildPageLinkMap, normalizeMarkdown } from './normalizer';
+export type { NormalizerWarning, NormalizeResult } from './normalizer';
+export { generateDocx, generateAllDocx } from './generator';
+export type { GeneratorOptions, ConvertResult } from './generator';
+export { assembleOutput, copyAttachments, buildIndexMarkdown, writeReport, EXIT_CODES } from './assembler';
+export type { AssemblerOptions, AssembleResult, ConversionReport, ReportWarning, ReportFailure } from './assembler';
+export { withRetrySync } from './utils/retry';
+export { logger, setVerbose } from './utils/logger';
+export { prepareOutputDir } from './utils/output';

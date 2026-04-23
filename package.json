@@ -1,0 +1,54 @@
+{
+  "name": "azure-devops-wiki-converter",
+  "version": "0.1.0",
+  "description": "Convert an Azure DevOps Wiki into Microsoft Word documents preserving folder structure, hyperlinks, and embedded images.",
+  "bin": {
+    "converter": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "assets/reference.docx",
+    "assets/markdown.lua"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/cli.js', '755')\"",
+    "build:reference-docx": "node scripts/build-reference-docx.js",
+    "lint": "eslint src tests --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "test": "jest --passWithNoTests",
+    "start": "node dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "azure-devops",
+    "wiki",
+    "docx",
+    "converter",
+    "pandoc"
+  ],
+  "author": "mr-pedro-damasio",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.5.0"
+  }
+}

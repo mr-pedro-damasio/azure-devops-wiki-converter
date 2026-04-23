@@ -16,7 +16,10 @@
       "configureZshAsDefaultShell": true,
       "upgradePackages": true
     },
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/pandoc:1": {
+      "version": "3.6.4"
+    }
   },
 "customizations": {
     "vscode": {
