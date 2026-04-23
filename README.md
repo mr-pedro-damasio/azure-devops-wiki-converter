@@ -1,57 +1,37 @@
-# project-template-devcontainer
+# azure-devops-wiki-converter
 
-This repository is a minimal project template focused on a reproducible setup for both VS Code Dev Containers and GitHub Codespaces.
+Convert an Azure DevOps Wiki into Microsoft Word documents while preserving folder structure, hyperlinks, and embedded images.
 
-It gives you a ready-to-use Ubuntu-based development environment with common utilities, Node.js, useful editor extensions, and post-create bootstrapping.
+This repository is currently in the project-definition stage. The development environment is ready, and the next milestone is to define the MVP, stack, and implementation approach for the converter.
 
-## What this template contains
+## Project goal
 
-- `.devcontainer/devcontainer.json`: Main Dev Container configuration.
-- `.devcontainer/Dockerfile`: Base image and OS-level packages.
-- `.devcontainer/postCreateCommand.sh`: One-time setup that runs after container creation.
-- `AGENTS.md`: Agent workflow and contribution guardrails.
-- `CLAUDE.md`: Claude-specific quick start that references `@AGENTS.md` and `docs/PLAN.md`.
-- `docs/PLAN.md`: Living implementation plan/checklist template.
+The goal of this project is to export Azure DevOps Wiki content into a set of Word documents that remain usable outside Azure DevOps. The output should preserve the original wiki hierarchy, keep links working where possible, and render images correctly in the generated documents.
 
-## Project scaffolding
+## Current status
 
-This template now includes a practical default structure:
+- Project initialization is in progress.
+- Repository documentation has been converted from the starter template to the project context.
+- Product-definition work is tracked in `docs/PLAN.md`.
+- No converter implementation has been added yet.
 
-```text
-.
-|-- .devcontainer/
-|-- .github/workflows/
-|-- .vscode/
-|-- config/
-|-- docs/
-|   |-- PLAN.md
-|   |-- architecture/
-|   `-- runbooks/
-|-- scripts/
-|-- src/
-|-- tests/
-|-- AGENTS.md
-|-- CLAUDE.md
-`-- README.md
-```
+## Development environment
 
-Use this as a starting point and trim/expand to match your stack.
+The repository includes a reproducible development environment for both local Dev Containers and GitHub Codespaces.
 
-## Quick start
+### Quick start
 
-### Option A: Local Dev Container
+#### Option A: Local Dev Container
 
 1. Open this folder in VS Code.
-2. Run the command: `Dev Containers: Reopen in Container`.
+2. Run the command `Dev Containers: Reopen in Container`.
 3. Wait for the build and post-create setup to complete.
 
-When setup finishes, the script prints:
+When setup finishes, the script prints `Dev container is ready.`
 
-`Dev container is ready.`
+#### Option B: GitHub Codespaces
 
-### Option B: GitHub Codespaces
-
-1. Click **Code** in GitHub and open a new codespace from this repository.
+1. Create a new codespace from this repository.
 2. Wait for container creation and post-create setup.
 3. Open the project in the web editor or desktop VS Code.
 
@@ -59,57 +39,28 @@ The same `.devcontainer/devcontainer.json` is used in both modes.
 
 ## Environment details
 
-The container is built from:
+The container is built from `mcr.microsoft.com/devcontainers/base:ubuntu`.
 
-- `mcr.microsoft.com/devcontainers/base:ubuntu`
-
-During image build, these packages are installed:
+Installed OS packages:
 
 - `build-essential`
 - `curl`
 - `ca-certificates`
 
-Dev Container features enabled:
+Enabled Dev Container features:
 
-- `common-utils` (with Zsh installed and configured as default shell, package upgrades enabled)
-- `node` (Node.js tooling)
+- `common-utils`
+- `node`
 
-The dev container declares baseline host requirements:
+Baseline host requirements declared in the dev container:
 
 - `cpus`: `2`
 - `memory`: `4gb`
 - `storage`: `16gb`
 
-These values are guidance for compatible hosts and help define a sensible baseline for Codespaces sizing.
+## VS Code customization
 
-## Configuration ownership (in-repo vs GitHub settings)
-
-Use this table to know where each control lives.
-
-| Area | Controlled in repository | Controlled in GitHub settings |
-|---|---|---|
-| Container image, features, bootstrap, users | `.devcontainer/devcontainer.json`, `.devcontainer/Dockerfile`, `.devcontainer/postCreateCommand.sh` | No |
-| Editor recommendations and defaults | `.vscode/extensions.json` and `customizations` in `.devcontainer/devcontainer.json` | No |
-| CI checks and automation | `.github/workflows/*.yml` | Actions permissions/policies |
-| Secrets used by code or workflows | Referenced in code/workflows | Repository or organization secrets |
-| Codespaces machine type and retention | No | Codespaces settings |
-| Codespaces prebuilds | No | Codespaces prebuild configuration |
-
-## Codespaces settings checklist (outside repository files)
-
-Apply these settings in GitHub after creating a repository from this template:
-
-1. Enable Codespaces for the repository.
-2. Set a default machine type that matches expected project size.
-3. Configure idle timeout and retention period.
-4. Configure prebuilds for the main branch (and key feature branches if needed).
-5. Add required repository or organization secrets.
-
-For a copy-paste runbook, see `docs/runbooks/codespaces-setup.md`.
-
-## VS Code customization included
-
-The template auto-installs these extensions in the container:
+The container installs these VS Code extensions:
 
 - `ms-azuretools.vscode-docker`
 - `esbenp.prettier-vscode`
@@ -118,55 +69,47 @@ The template auto-installs these extensions in the container:
 
 ## Post-create automation
 
-After the container is created, VS Code runs:
+After the container is created, VS Code runs `bash .devcontainer/postCreateCommand.sh`.
 
-- `bash .devcontainer/postCreateCommand.sh`
+That script currently:
 
-This script does the following:
+1. Marks the workspace as a safe Git directory.
+2. Installs the Claude Code CLI.
+3. Configures the official Claude plugin marketplace.
+4. Installs the `ralph-loop` plugin.
 
-1. Marks the mounted workspace as a safe Git directory.
-2. Installs the Claude Code CLI globally:
-   - `npm install -g @anthropic-ai/claude-code`
-3. Ensures the official Claude plugin marketplace is configured.
-4. Installs the plugin:
-   - `ralph-loop@claude-plugins-official`
+## Repository layout
 
-If marketplace setup commands report "already exists" style errors, the script continues safely.
+```text
+.
+|-- .devcontainer/
+|-- docs/
+|   |-- PLAN.md
+|   |-- architecture/
+|   `-- runbooks/
+|-- scripts/
+|-- AGENTS.md
+|-- CLAUDE.md
+`-- README.md
+```
 
-## How to customize this template
+## Planning and docs
 
-## 1) Add more language/tool features
+- `docs/PLAN.md`: Active milestone tracking for project setup and definition.
+- `docs/architecture/`: Reserved for architecture and project-definition notes.
+- `docs/runbooks/codespaces-setup.md`: GitHub-side Codespaces setup checklist.
 
-Edit `.devcontainer/devcontainer.json` and add entries under `features`.
+## Codespaces settings outside the repository
 
-## 2) Add apt packages
+Some Codespaces settings are not stored in this repository and still need to be configured in GitHub, including:
 
-Edit `.devcontainer/Dockerfile` and extend the `apt-get install` list.
+- Default machine size
+- Retention and idle timeout
+- Prebuild policy
+- Repository or organization secrets
 
-## 3) Add bootstrap steps
+For the full checklist, see `docs/runbooks/codespaces-setup.md`.
 
-Edit `.devcontainer/postCreateCommand.sh` for tools that should be installed after container creation.
+## Next milestone
 
-Tips:
-
-- Keep `set -euo pipefail` in shell scripts for safer execution.
-- Use idempotent commands where possible so rebuilds do not fail.
-
-## Rebuild and troubleshoot
-
-- Rebuild container after Dockerfile or feature changes:
-  - `Dev Containers: Rebuild Container`
-- If post-create setup fails, inspect terminal output and rerun manually:
-  - `bash .devcontainer/postCreateCommand.sh`
-
-For Codespaces-specific checks, see `docs/runbooks/codespaces-setup.md`.
-
-## Template intent
-
-Use this template as a base for any repository where you want:
-
-- Consistent local development environments
-- Fast onboarding for new contributors
-- Reduced "works on my machine" drift
-
-Add your project code and project-specific docs on top of this foundation.
+Milestone 3 will define the converter's target users, non-goals, MVP scope, and primary technology stack before implementation begins.
