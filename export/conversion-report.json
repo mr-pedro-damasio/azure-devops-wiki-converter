@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-23T22:00:38.137Z",
+  "generatedAt": "2026-05-12T12:13:20.973Z",
   "wikiUrl": "https://DSTILuzSaude@dev.azure.com/DSTILuzSaude/LS.DSTI.SWF.ARCH/_git/LS.DSTI.SWF.Wiki.wiki",
-  "pagesConverted": 121,
+  "pagesConverted": 124,
   "pagesSkipped": 0,
   "imagesEmbedded": 0,
   "linksRewritten": 0,
@@ -478,6 +478,31 @@
       "message": "Image not found: /.attachments/==image_0==-4c51957f-eecd-4782-a5f7-e60c8b4b8303.jpg"
     },
     {
+      "page": "4.3 Feature Toggle",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-83640ca6-dfd4-4334-82ed-e534315e324d.png"
+    },
+    {
+      "page": "4.3 Feature Toggle",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-281def89-c668-4575-b8fc-ed562e6f5e8e.png"
+    },
+    {
+      "page": "4.3 Feature Toggle",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-cc694bdb-0b03-4056-b0d3-4acbfba8f4ee.png"
+    },
+    {
+      "page": "4.3 Feature Toggle",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-1d355475-b64e-4246-8aae-996c157fa2bd.png"
+    },
+    {
+      "page": "4.3 Feature Toggle",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-678e9643-05e0-4e64-91ce-d232c4c80013.png"
+    },
+    {
       "page": "4.4 Firebase",
       "type": "unresolved-image",
       "message": "Image not found: /.attachments/image-1ae957ab-a94e-4de1-abf5-e9828e036295.png"
@@ -528,6 +553,11 @@
       "message": "Unsupported ::: block removed"
     },
     {
+      "page": "4.12 Sequence Caching",
+      "type": "unresolved-image",
+      "message": "Image not found: /.attachments/image-c163a502-8448-4f32-9746-a36a994b6db2.png"
+    },
+    {
       "page": "[InProgress] BizEvents Trigger in Outsytems App",
       "type": "unresolved-image",
       "message": "Image not found: /.attachments/==image_0==-ed5d5d45-f4da-4e65-b2f2-f70a08e018ab.jpeg"
@@ -571,11 +601,6 @@
       "page": "Service Actions",
       "type": "unresolved-image",
       "message": "Image not found: /.attachments/image-54ed0c96-df43-4f93-887b-8684632d7948.png"
-    },
-    {
-      "page": "5.2.4 Sequence Caching",
-      "type": "unresolved-image",
-      "message": "Image not found: /.attachments/image-c163a502-8448-4f32-9746-a36a994b6db2.png"
     }
   ],
   "failures": [],
